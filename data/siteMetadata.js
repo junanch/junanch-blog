@@ -1,6 +1,6 @@
 const siteMetadata = {
   title: 'Junan Blog',
-  author: 'Jerian Chen',
+  author: 'Junan Chen',
   headerTitle: '',
   description: 'A blog created with Next.js and Tailwind.css',
   language: 'en-us',

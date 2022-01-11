@@ -31,7 +31,7 @@ export default function Tags({ tags }: InferGetStaticPropsType<typeof getStaticP
                 <Tag text={t} />
                 <Link
                   href={`/tags/${kebabCase(t)}`}
-                  className="-ml-2 text-sm font-semibold text-gray-600 uppercase dark:text-gray-300"
+                  className="-ml-2 text-sm font-semibold text-gray-600 dark:text-gray-300"
                 >
                   {` (${tags[t]})`}
                 </Link>
