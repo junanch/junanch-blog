@@ -23,9 +23,9 @@ module.exports = {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: colors.teal,
+        primary: colors.blue,
         //@ts-ignore
-        gray: colors.neutral, // TODO: Remove ts-ignore after tw types gets updated to v3
+        gray: colors.slate, // TODO: Remove ts-ignore after tw types gets updated to v3
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -59,7 +59,7 @@ module.exports = {
               backgroundColor: theme('colors.gray.800'),
             },
             code: {
-              color: theme('colors.fuchsia.500'),
+              color: theme('colors.pink.500'),
               fontWeight: 500,
               backgroundColor: theme('colors.transparent'),
               paddingLeft: '4px',
@@ -121,7 +121,7 @@ module.exports = {
               backgroundColor: theme('colors.gray.800'),
             },
             code: {
-              backgroundColor: theme('colors.gray.800'),
+              backgroundColor: theme('colors.transparent'),
             },
             details: {
               backgroundColor: theme('colors.gray.800'),
