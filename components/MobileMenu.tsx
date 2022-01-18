@@ -20,7 +20,7 @@ export default function MobileMenu({ isOpened, onToggle }: PropsType) {
           x2="14"
           y2="6"
           strokeLinecap="round"
-          className="stroke-gray-900 dark:text-gray-100 stroke-[3px]"
+          className="stroke-gray-900 dark:stroke-gray-100 stroke-[3px] transition-all"
         />
         <line
           x1="2"
@@ -28,14 +28,14 @@ export default function MobileMenu({ isOpened, onToggle }: PropsType) {
           x2="24"
           y2="14"
           strokeLinecap="round"
-          className="stroke-gray-900 dark:text-gray-100 stroke-[3px]"
+          className="stroke-gray-900 dark:stroke-gray-100 stroke-[3px] transition-all"
         />
         <line
           x1="2"
           y1="22"
           x2="14"
           y2="22"
-          className="stroke-gray-900 dark:text-gray-100 stroke-[3px]"
+          className="stroke-gray-900 dark:stroke-gray-100 stroke-[3px] transition-all"
           strokeLinecap="round"
         />
       </svg>
