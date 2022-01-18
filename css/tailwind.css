@@ -23,3 +23,31 @@ input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
 }
+
+/* https://codepen.io/Danilo06/pen/PoNNvGm */
+.mobile-menu line {
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.mobile-menu.opened line:nth-child(1) {
+  transform-origin: top left;
+  transform: rotatez(45deg) translate(6px, -6px);
+}
+
+.mobile-menu line:nth-child(2) {
+  transform-origin: center;
+}
+
+.mobile-menu.opened line:nth-child(2) {
+  transform-origin: center;
+  transform: rotatez(-45deg);
+}
+
+.mobile-menu line:nth-child(3) {
+  transform-origin: bottom right;
+}
+
+.mobile-menu.opened line:nth-child(3) {
+  transform-origin: bottom right;
+  transform: translate(1px, 8px) rotatez(45deg);
+}
