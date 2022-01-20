@@ -18,7 +18,7 @@ const discussUrl = (slug) =>
   )}`
 
 const postDateTemplate: Intl.DateTimeFormatOptions = {
-  weekday: 'long',
+  // weekday: 'long',
   year: 'numeric',
   month: 'long',
   day: 'numeric',
@@ -45,77 +45,73 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       <ScrollTopAndComment />
       <article>
         <div>
-          <header className="pt-6 xl:pb-6">
-            <div className="space-y-1 text-center">
-              <dl className="space-y-10">
-                <div>
-                  <dt className="sr-only">Published on</dt>
-                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                    <time dateTime={date}>
-                      {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
-                    </time>
-                  </dd>
-                </div>
-              </dl>
+          <header className="pt-6">
+            <div className="space-y-1">
               <div>
                 <PageTitle>{title}</PageTitle>
               </div>
+              <dl className="space-y-1 space-x-2 flex flex-wrap items-center text-gray-500 dark:text-gray-400">
+                <dt className="sr-only">Authors</dt>
+                <dd>
+                  <ul className="flex justify-center space-x-2">
+                    {authorDetails.map((author) => (
+                      <li className="flex items-center space-x-2" key={author.name}>
+                        {author.avatar && (
+                          <Image
+                            src={author.avatar}
+                            width="22px"
+                            height="22px"
+                            alt="avatar"
+                            className="rounded-full"
+                          />
+                        )}
+                        <dl className="text-sm font-medium leading-5 whitespace-nowrap">
+                          <dt className="sr-only">Name</dt>
+                          <dd className="">{author.name}</dd>
+                        </dl>
+                      </li>
+                    ))}
+                  </ul>
+                </dd>
+
+                <span className="block">/</span>
+
+                <dt className="sr-only">Published on</dt>
+                <dd className="text-base leading-4">
+                  <time dateTime={date}>
+                    {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
+                  </time>
+                </dd>
+
+                {tags && (
+                  <>
+                    <dt className="sr-only">Tags</dt>
+                    <dd className="text-base leading-4">
+                      <ul className="flex justify-center space-x-2">
+                        {tags.map((tag) => (
+                          <li
+                            key={tag}
+                            className="rounded-md px-2 py-1 border leading-none text-sm dark:border-gray-600"
+                          >
+                            <Tag text={tag} className="mr-0 !text-gray-500 !dark:text-gray-400" />
+                          </li>
+                        ))}
+                      </ul>
+                    </dd>
+                  </>
+                )}
+              </dl>
             </div>
           </header>
           <div
             className="pb-8 divide-y divide-gray-200 dark:divide-gray-700"
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
-            <dl className="pt-6 pb-10">
-              <dt className="sr-only">Authors</dt>
-              <dd>
-                <ul className="flex justify-center space-x-8 sm:space-x-12">
-                  {authorDetails.map((author) => (
-                    <li className="flex items-center space-x-2" key={author.name}>
-                      {author.avatar && (
-                        <Image
-                          src={author.avatar}
-                          width="38px"
-                          height="38px"
-                          alt="avatar"
-                          className="w-10 h-10 rounded-full"
-                        />
-                      )}
-                      <dl className="text-sm font-medium leading-5 whitespace-nowrap">
-                        <dt className="sr-only">Name</dt>
-                        <dd className="text-gray-900 dark:text-gray-100">{author.name}</dd>
-                        <dt className="sr-only">Twitter</dt>
-                        <dd>
-                          {author.twitter && (
-                            <Link
-                              href={author.twitter}
-                              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                            >
-                              {author.twitter.replace('https://twitter.com/', '@')}
-                            </Link>
-                          )}
-                        </dd>
-                      </dl>
-                    </li>
-                  ))}
-                </ul>
-              </dd>
-            </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
-              <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">{children}</div>
+              <div className="pt-8 pb-8 prose dark:prose-dark max-w-none">{children}</div>
             </div>
             <footer>
               <div className="text-sm font-medium leading-5 divide-gray-200 dark:divide-gray-700 xl:col-start-1 xl:row-start-2">
-                {tags && (
-                  <div className="py-4">
-                    <h2 className="text-xs tracking-wide text-gray-500 dark:text-gray-400">Tags</h2>
-                    <div className="flex flex-wrap">
-                      {tags.map((tag) => (
-                        <Tag key={tag} text={tag} />
-                      ))}
-                    </div>
-                  </div>
-                )}
                 {(next || prev) && (
                   <div className="flex justify-between py-4">
                     {prev && (

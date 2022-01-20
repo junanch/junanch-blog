@@ -6,12 +6,20 @@ import Link from './Link'
 import ThemeSwitch from './ThemeSwitch'
 import MobileMenu from './MobileMenu'
 
-function useIsScrollTop() {
+function useScroll() {
   const [isTop, setIsTop] = React.useState(true)
+  const [direction, setDirection] = React.useState('down')
+
   React.useEffect(() => {
+    let lastOffsetY = window.pageYOffset
+
     function onScroll() {
       setIsTop(window.scrollY <= 0)
+      const currentOffsetY = Math.max(window.pageYOffset, 0)
+      setDirection(currentOffsetY > lastOffsetY ? 'down' : 'up')
+      lastOffsetY = currentOffsetY
     }
+
     window.addEventListener('scroll', onScroll)
 
     return () => {
@@ -19,7 +27,7 @@ function useIsScrollTop() {
     }
   }, [])
 
-  return isTop
+  return { isTop, direction }
 }
 
 function useToggleMenu() {
@@ -40,13 +48,13 @@ function useToggleMenu() {
 
 export default function Header() {
   const [menuShow, onMenuToggle] = useToggleMenu()
-  const isTop = useIsScrollTop()
+  const { direction } = useScroll()
 
   return (
     <>
       <header
-        className={`flex items-center justify-between py-4 sticky top-0 z-20 border-b ${
-          isTop ? 'border-transparent' : 'border-gray-900/10 dark:border-gray-300/10'
+        className={`flex items-center justify-between py-4 top-0 sticky z-20 w-full transition-all  ${
+          direction === 'down' ? 'translate-y-[-100%]' : ''
         } bg-white dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 backdrop-saturate-150 backdrop-blur`}
       >
         <nav className="w-full mx-auto max-w-3xl xl:max-w-5xl flex items-center justify-between px-3 xl:px-0">
