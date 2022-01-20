@@ -8,7 +8,7 @@ import MobileMenu from './MobileMenu'
 
 function useScroll() {
   const [isTop, setIsTop] = React.useState(true)
-  const [direction, setDirection] = React.useState('down')
+  const [direction, setDirection] = React.useState('up')
 
   React.useEffect(() => {
     let lastOffsetY = window.pageYOffset
