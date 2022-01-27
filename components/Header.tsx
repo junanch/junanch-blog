@@ -55,7 +55,7 @@ export default function Header() {
       <header
         className={`flex items-center justify-between py-4 top-0 sticky z-20 w-full transition-all  ${
           direction === 'down' ? 'translate-y-[-100%]' : ''
-        } bg-white dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 backdrop-saturate-150 backdrop-blur`}
+        } backdrop-blur bg-white/75 supports-backdrop-blur:bg-white/95 dark:bg-gray-900/75`}
       >
         <nav className="w-full mx-auto max-w-3xl xl:max-w-5xl flex items-center justify-between px-3 xl:px-0">
           <div>
@@ -96,7 +96,7 @@ export default function Header() {
       <div
         className={`sm:hidden fixed w-full h-screen right-0 z-20 transform ease-in-out duration-500 ${
           menuShow ? 'translate-x-0' : ' -translate-x-full'
-        } bg-white dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 backdrop-saturate-150 backdrop-blur`}
+        } bg-white/75 dark:bg-gray-900/75 backdrop-blur supports-backdrop-blur:bg-white/95`}
       >
         <nav className="h-full mt-8 space-y-8">
           {headerNavLinks.map((link) => (

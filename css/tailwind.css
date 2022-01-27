@@ -25,26 +25,46 @@ input:-webkit-autofill:focus {
 }
 
 /* https://codepen.io/Danilo06/pen/PoNNvGm */
-.mobile-menu line:nth-child(1) {
-  transform-origin: top left;
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.mobile-menu line:nth-child(2) {
-  transform-origin: center;
+.mobile-menu span {
+  height: 4px;
+  border-radius: 10px;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
-.mobile-menu line:nth-child(3) {
-  transform-origin: bottom right;
+.mobile-menu span:nth-child(1) {
+  transform-origin: bottom;
+  width: 50%;
 }
 
-.mobile-menu.opened line:nth-child(1) {
-  transform: rotatez(45deg) translate(6px, -6px);
+.mobile-menu span:nth-child(2) {
+  transform-origin: top;
+  width: 100%;
 }
 
-.mobile-menu.opened line:nth-child(2) {
+.mobile-menu span:nth-child(3) {
+  transform-origin: bottom;
+  width: 75%;
+}
+
+.mobile-menu.opened span {
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.mobile-menu.opened span:nth-child(1) {
+  transform: translate(1px, 3px) rotatez(45deg);
+}
+
+.mobile-menu.opened span:nth-child(2) {
   transform: rotatez(-45deg);
 }
 
-.mobile-menu.opened line:nth-child(3) {
-  transform: translate(1px, 8px) rotatez(45deg);
+.mobile-menu.opened span:nth-child(3) {
+  width: 50%;
+  transform: translate(10.5px, -5.5px) rotatez(45deg);
 }

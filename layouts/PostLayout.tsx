@@ -73,27 +73,25 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     ))}
                   </ul>
                 </dd>
-
                 <span className="block">/</span>
-
                 <dt className="sr-only">Published on</dt>
                 <dd className="text-base leading-4">
                   <time dateTime={date}>
                     {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
                   </time>
                 </dd>
-
                 {tags && (
                   <>
+                    <span className="block">/</span>
                     <dt className="sr-only">Tags</dt>
                     <dd className="text-base leading-4">
                       <ul className="flex justify-center space-x-2">
                         {tags.map((tag) => (
-                          <li
-                            key={tag}
-                            className="rounded-md px-2 py-1 border leading-none text-sm dark:border-gray-600"
-                          >
-                            <Tag text={tag} className="mr-0 !text-gray-500 !dark:text-gray-400" />
+                          <li key={tag} className="">
+                            <Tag
+                              text={tag}
+                              className="mr-0 text-base leading-4 !text-gray-500 !dark:text-gray-400"
+                            />
                           </li>
                         ))}
                       </ul>
