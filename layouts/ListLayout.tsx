@@ -22,11 +22,22 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
   const displayPosts =
     initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts
 
+  const groupByYear = (array: PostFrontMatter[]) => {
+    return array?.reduce?.((pre, cur, index, arr) => {
+      const curYear = formatDate(cur?.date, 'YYYY')
+      const firstIndex = arr?.findIndex?.((v) => formatDate(v?.date, 'YYYY') === curYear)
+      if (index === firstIndex) {
+        return [...pre, curYear, cur]
+      }
+      return [...pre, cur]
+    }, []) as (PostFrontMatter | string)[]
+  }
+
   return (
     <>
-      <div className="divide-y">
-        <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+      <div>
+        <div className="pt-6 pb-4 space-y-2 md:space-y-4">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10">
             {title}
           </h1>
           <div className="relative max-w-lg">
@@ -34,7 +45,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
               aria-label="Search articles"
               type="text"
               onChange={(e) => setSearchValue(e.target.value)}
-              placeholder="Search articles"
+              placeholder="search title,tags"
               className="block w-full px-4 py-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:border-gray-900 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800 dark:text-gray-100"
             />
             <svg
@@ -55,35 +66,34 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
         </div>
         <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
-          {displayPosts.map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
+          {groupByYear(displayPosts)?.map?.((frontMatter) => {
+            if (typeof frontMatter === 'string') {
+              return (
+                <h2 key={frontMatter} className="mt-4 text-2xl font-bold leading-8 tracking-tight">
+                  <Link
+                    id={frontMatter}
+                    href={`/blog/#${frontMatter}`}
+                    className="text-gray-900 dark:text-gray-100"
+                  >
+                    {frontMatter}
+                  </Link>
+                </h2>
+              )
+            }
+            const { date, title, slug } = frontMatter
             return (
-              <li key={slug} className="py-4">
-                <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
-                  <dl>
-                    <dt className="sr-only">Published on</dt>
-                    <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                      <time dateTime={date}>{formatDate(date)}</time>
-                    </dd>
-                  </dl>
-                  <div className="space-y-3 xl:col-span-3">
-                    <div>
-                      <h3 className="text-2xl font-bold leading-8 tracking-tight">
-                        <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
-                          {title}
-                        </Link>
-                      </h3>
-                      <div className="flex flex-wrap">
-                        {tags.map((tag) => (
-                          <Tag key={tag} text={tag} />
-                        ))}
-                      </div>
-                    </div>
-                    <div className="prose text-gray-500 max-w-none dark:text-gray-400">
-                      {summary}
-                    </div>
-                  </div>
-                </article>
+              <li key={slug} className="py-4 flex items-center space-x-4">
+                <dl className="min-w-[80px]">
+                  <dt className="sr-only">Published on</dt>
+                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                    <time dateTime={date}>{formatDate(date, 'MMM DD')}</time>
+                  </dd>
+                </dl>
+                <h3 className="text-xl font-bold leading-8 tracking-tight">
+                  <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
+                    {title}
+                  </Link>
+                </h3>
               </li>
             )
           })}

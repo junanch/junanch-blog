@@ -22,20 +22,11 @@ export const getStaticProps: GetStaticProps<{
   return { props: { initialDisplayPosts, posts, pagination } }
 }
 
-export default function Blog({
-  posts,
-  initialDisplayPosts,
-  pagination,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Blog({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <PageSEO title={`Blog - ${siteMetadata.author}`} description={siteMetadata.description} />
-      <ListLayout
-        posts={posts}
-        initialDisplayPosts={initialDisplayPosts}
-        pagination={pagination}
-        title="All Posts"
-      />
+      <ListLayout posts={posts} initialDisplayPosts={posts} title="All Posts" />
     </>
   )
 }

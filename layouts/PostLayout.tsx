@@ -86,12 +86,13 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     <dt className="sr-only">Tags</dt>
                     <dd className="text-base leading-4">
                       <ul className="flex justify-center space-x-2">
-                        {tags.map((tag) => (
+                        {tags?.map?.((tag, index) => (
                           <li key={tag} className="">
                             <Tag
                               text={tag}
                               className="mr-0 text-base leading-4 !text-gray-500 !dark:text-gray-400"
                             />
+                            {index !== tags?.length - 1 && <span>,</span>}
                           </li>
                         ))}
                       </ul>

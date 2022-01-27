@@ -1,14 +1,7 @@
-import siteMetadata from '@/data/siteMetadata'
+import dayjs from 'dayjs'
 
-const formatDate = (date: string) => {
-  const options: Intl.DateTimeFormatOptions = {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  }
-  const now = new Date(date).toLocaleDateString(siteMetadata.locale, options)
-
-  return now
+const formatDate = (date: string, template?: string) => {
+  return dayjs(date)?.format?.(template)
 }
 
 export default formatDate
