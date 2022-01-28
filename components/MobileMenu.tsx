@@ -9,7 +9,9 @@ export default function MobileMenu({ isOpened, onToggle }: PropsType) {
   return (
     <button
       type="button"
-      className={`mobile-menu ${isOpened ? 'opened' : ''} cursor-pointer w-8 h-8 p-1 sm:hidden`}
+      className={`mobile-menu ${
+        isOpened ? 'opened' : ''
+      } cursor-pointer w-8 h-8 p-1 sm:hidden rounded  hover:bg-gray-200 dark:hover:bg-gray-800`}
       onClick={onToggle}
       aria-label="Toggle Menu"
     >

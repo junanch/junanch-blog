@@ -5,6 +5,7 @@ import Logo from '@/data/logo.svg'
 import Link from './Link'
 import ThemeSwitch from './ThemeSwitch'
 import MobileMenu from './MobileMenu'
+import { useRouter } from 'next/router'
 
 function useScroll() {
   const [isTop, setIsTop] = React.useState(true)
@@ -49,6 +50,7 @@ function useToggleMenu() {
 export default function Header() {
   const [menuShow, onMenuToggle] = useToggleMenu()
   const { direction } = useScroll()
+  const router = useRouter()
 
   return (
     <>
@@ -57,19 +59,17 @@ export default function Header() {
           direction === 'down' ? 'translate-y-[-100%]' : ''
         } backdrop-blur bg-white/75 supports-backdrop-blur:bg-white/95 dark:bg-gray-900/75`}
       >
-        <nav className="w-full mx-auto max-w-3xl xl:max-w-5xl flex items-center justify-between px-3 xl:px-0">
+        <nav className="w-full mx-auto max-w-3xl flex items-center justify-between px-3">
           <div>
             <Link href="/" aria-label="Tailwind CSS Blog">
               <div className="flex items-center justify-between">
-                <div className="mr-3">
+                <div className="w-6 h-6 transition hover:-translate-y-[2px]">
                   <Logo />
                 </div>
-                {typeof siteMetadata.headerTitle === 'string' && siteMetadata.headerTitle ? (
-                  <div className="hidden h-6 text-2xl font-semibold sm:block">
+                {typeof siteMetadata.headerTitle === 'string' && siteMetadata.headerTitle && (
+                  <div className="ml-3 hidden h-6 leading-6 text-base font-semibold sm:block">
                     {siteMetadata.headerTitle}
                   </div>
-                ) : (
-                  siteMetadata.headerTitle
                 )}
               </div>
             </Link>
@@ -80,7 +80,9 @@ export default function Header() {
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100"
+                  className={`py-2 px-4 font-medium text-gray-900 dark:text-gray-100 rounded hover:bg-gray-200 dark:hover:bg-gray-800 ${
+                    router.asPath === link.href ? 'font-semibold' : ''
+                  }`}
                 >
                   {link.title}
                 </Link>

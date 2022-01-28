@@ -6,7 +6,7 @@ import formatDate from '@/lib/utils/formatDate'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 interface Props {
   posts: PostFrontMatter[]
-  title: string
+  title?: string
   initialDisplayPosts?: PostFrontMatter[]
   pagination?: ComponentProps<typeof Pagination>
   showTags?: boolean
@@ -17,7 +17,7 @@ export default function ListLayout({
   title,
   initialDisplayPosts = [],
   pagination,
-  showTags = false,
+  showTags = false
 }: Props) {
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((frontMatter) => {
