@@ -9,9 +9,16 @@ interface Props {
   title: string
   initialDisplayPosts?: PostFrontMatter[]
   pagination?: ComponentProps<typeof Pagination>
+  showTags?: boolean
 }
 
-export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }: Props) {
+export default function ListLayout({
+  posts,
+  title,
+  initialDisplayPosts = [],
+  pagination,
+  showTags = false,
+}: Props) {
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((frontMatter) => {
     const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ')
@@ -80,20 +87,29 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                 </h2>
               )
             }
-            const { date, title, slug } = frontMatter
+            const { date, title, slug, tags } = frontMatter
             return (
-              <li key={slug} className="py-4 flex items-center space-x-4">
+              <li key={slug} className="py-4 flex space-x-4">
                 <dl className="min-w-[80px]">
                   <dt className="sr-only">Published on</dt>
-                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                  <dd className="text-base font-medium leading-8 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>{formatDate(date, 'MMM DD')}</time>
                   </dd>
                 </dl>
-                <h3 className="text-xl font-bold leading-8 tracking-tight">
-                  <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
-                    {title}
-                  </Link>
-                </h3>
+                <div>
+                  <h3 className="text-xl font-bold leading-8 tracking-tight">
+                    <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
+                      {title}
+                    </Link>
+                  </h3>
+                  {showTags && tags?.length > 0 && (
+                    <div className="flex flex-wrap">
+                      {tags?.map?.((tag) => (
+                        <Tag key={tag} text={tag} />
+                      ))}
+                    </div>
+                  )}
+                </div>
               </li>
             )
           })}
