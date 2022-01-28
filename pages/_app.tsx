@@ -10,41 +10,12 @@ import siteMetadata from '@/data/siteMetadata'
 import Analytics from '@/components/analytics'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import { ClientReload } from '@/components/ClientReload'
-import { useRouter } from 'next/router'
-import ProgressBar from '@/components/ProgressBar'
+import { RouterProgressBar, ScrollProgressBar } from '@/components/ProgressBar'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
 
-function useRouterProgress() {
-  const [isAnimating, setIsAnimating] = React.useState(false)
-  const router = useRouter()
-
-  React.useEffect(() => {
-    const handleStart = () => {
-      setIsAnimating(true)
-    }
-    const handleStop = () => {
-      setIsAnimating(false)
-    }
-
-    router.events.on('routeChangeStart', handleStart)
-    router.events.on('routeChangeComplete', handleStop)
-    router.events.on('routeChangeError', handleStop)
-
-    return () => {
-      router.events.off('routeChangeStart', handleStart)
-      router.events.off('routeChangeComplete', handleStop)
-      router.events.off('routeChangeError', handleStop)
-    }
-  }, [router])
-
-  return { isAnimating }
-}
-
 export default function App({ Component, pageProps }: AppProps) {
-  const { isAnimating } = useRouterProgress()
-
   return (
     <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
       <Head>
@@ -52,7 +23,8 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       {isDevelopment && isSocket && <ClientReload />}
       <Analytics />
-      <ProgressBar isAnimating={isAnimating} />
+      <ScrollProgressBar />
+      <RouterProgressBar />
       <LayoutWrapper>
         <Component {...pageProps} />
       </LayoutWrapper>

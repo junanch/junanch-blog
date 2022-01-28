@@ -21,8 +21,8 @@ const ScrollTopAndComment = () => {
   }
   return (
     <div
-      className={`fixed z-10 flex-col hidden gap-3 right-8 bottom-8 ${
-        show ? 'md:flex' : 'md:hidden'
+      className={`fixed z-10 flex-col gap-3 right-4 bottom-8 sm:right-8 ${
+        show ? 'flex' : 'hidden'
       }`}
     >
       <button

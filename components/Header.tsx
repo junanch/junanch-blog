@@ -55,7 +55,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`flex items-center justify-between py-4 top-0 sticky z-20 w-full transition-all  ${
+        className={`flex items-center justify-between py-4 top-0 sticky z-10 w-full transition-all  ${
           direction === 'down' ? 'translate-y-[-100%]' : ''
         } backdrop-blur bg-white/75 supports-backdrop-blur:bg-white/95 dark:bg-gray-900/75`}
       >
@@ -96,7 +96,7 @@ export default function Header() {
 
       {/* Mobile Modal */}
       <div
-        className={`sm:hidden fixed w-full h-screen right-0 z-20 transform ease-in-out duration-500 ${
+        className={`sm:hidden fixed w-full h-screen right-0 z-10 transform ease-in-out duration-500 ${
           menuShow ? 'translate-x-0' : ' -translate-x-full'
         } bg-white/75 dark:bg-gray-900/75 backdrop-blur supports-backdrop-blur:bg-white/95`}
       >
