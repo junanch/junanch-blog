@@ -90,7 +90,7 @@ export default function ListLayout({
             const { date, title, slug, tags } = frontMatter
             return (
               <li key={slug} className="py-4 flex space-x-4">
-                <dl className="min-w-[80px]">
+                <dl className="min-w-[72px]">
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base font-medium leading-8 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>{formatDate(date, 'MMM DD')}</time>

@@ -16,7 +16,7 @@ const Container = ({ animationDuration, children, isFinished }) => (
 
 const Bar = ({ animationDuration, progress }) => (
   <div
-    className="bg-gray-900 dark:bg-gray-100 h-2 w-full left-0 top-0 fixed z-20"
+    className="bg-gray-900 dark:bg-gray-100 h-1 w-full left-0 top-0 fixed z-20"
     style={{
       marginLeft: `${(-1 + progress) * 100}%`,
       transition: `margin-left ${animationDuration}ms linear`
@@ -85,7 +85,7 @@ export const ScrollProgressBar = () => {
 
   return (
     <div className="w-full left-0 top-0 fixed z-20">
-      <div className="h-2 bg-gray-900 dark:bg-gray-100" style={{ width: `${scroll}%` }}></div>
+      <div className="h-1 bg-gray-900 dark:bg-gray-100" style={{ width: `${scroll}%` }}></div>
     </div>
   )
 }

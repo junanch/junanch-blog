@@ -1,4 +1,5 @@
 import * as React from 'react'
+
 import '@/css/tailwind.css'
 import '@/css/prism.css'
 
@@ -11,11 +12,14 @@ import Analytics from '@/components/analytics'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import { ClientReload } from '@/components/ClientReload'
 import { RouterProgressBar, ScrollProgressBar } from '@/components/ProgressBar'
+import { useRouter } from 'next/router'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter()
+
   return (
     <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
       <Head>
@@ -23,7 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       {isDevelopment && isSocket && <ClientReload />}
       <Analytics />
-      <ScrollProgressBar />
+      {router?.pathname === '/blog/[...slug]' && <ScrollProgressBar />}
       <RouterProgressBar />
       <LayoutWrapper>
         <Component {...pageProps} />

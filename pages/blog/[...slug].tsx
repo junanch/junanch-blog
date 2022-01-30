@@ -15,10 +15,10 @@ export async function getStaticPaths() {
   return {
     paths: posts.map((p) => ({
       params: {
-        slug: formatSlug(p).split('/'),
-      },
+        slug: formatSlug(p).split('/')
+      }
     })),
-    fallback: false,
+    fallback: false
   }
 }
 
@@ -54,8 +54,8 @@ export const getStaticProps: GetStaticProps<{
       post,
       authorDetails,
       prev,
-      next,
-    },
+      next
+    }
   }
 }
 
@@ -63,7 +63,7 @@ export default function Blog({
   post,
   authorDetails,
   prev,
-  next,
+  next
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { mdxSource, toc, frontMatter } = post
 
