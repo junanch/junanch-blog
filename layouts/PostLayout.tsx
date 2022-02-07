@@ -151,7 +151,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 )}
               </div>
             </footer>
-            {/* <Comments frontMatter={frontMatter} /> */}
+            <Comments frontMatter={frontMatter} />
           </div>
         </div>
       </article>
