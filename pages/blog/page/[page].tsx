@@ -10,12 +10,12 @@ export const getStaticPaths: GetStaticPaths<{ page: string }> = async () => {
   const totalPosts = await getAllFilesFrontMatter('blog')
   const totalPages = Math.ceil(totalPosts.length / POSTS_PER_PAGE)
   const paths = Array.from({ length: totalPages }, (_, i) => ({
-    params: { page: (i + 1).toString() },
+    params: { page: (i + 1).toString() }
   }))
 
   return {
     paths,
-    fallback: false,
+    fallback: false
   }
 }
 
@@ -25,7 +25,7 @@ export const getStaticProps: GetStaticProps<{
   pagination: { currentPage: number; totalPages: number }
 }> = async (context) => {
   const {
-    params: { page },
+    params: { page }
   } = context
   const posts = await getAllFilesFrontMatter('blog')
   const pageNumber = parseInt(page as string)
@@ -35,22 +35,22 @@ export const getStaticProps: GetStaticProps<{
   )
   const pagination = {
     currentPage: pageNumber,
-    totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
+    totalPages: Math.ceil(posts.length / POSTS_PER_PAGE)
   }
 
   return {
     props: {
       posts,
       initialDisplayPosts,
-      pagination,
-    },
+      pagination
+    }
   }
 }
 
 export default function PostPage({
   posts,
   initialDisplayPosts,
-  pagination,
+  pagination
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>

@@ -17,7 +17,7 @@ export const MDXComponents: ComponentMap = {
   TOCInline,
   a: CustomLink,
   pre: Pre,
-  wrapper: Wrapper,
+  wrapper: Wrapper
 }
 
 interface Props {

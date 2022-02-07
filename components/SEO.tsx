@@ -99,7 +99,7 @@ export const BlogSEO = ({
   date,
   lastmod,
   url,
-  images = [],
+  images = []
 }: BlogSeoProps) => {
   const router = useRouter()
   const publishedAt = new Date(date).toISOString()
@@ -114,7 +114,7 @@ export const BlogSEO = ({
   const featuredImages = imagesArr.map((img) => {
     return {
       '@type': 'ImageObject',
-      url: `${siteMetadata.siteUrl}${img}`,
+      url: `${siteMetadata.siteUrl}${img}`
     }
   })
 
@@ -123,13 +123,13 @@ export const BlogSEO = ({
     authorList = authorDetails.map((author) => {
       return {
         '@type': 'Person',
-        name: author.name,
+        name: author.name
       }
     })
   } else {
     authorList = {
       '@type': 'Person',
-      name: siteMetadata.author,
+      name: siteMetadata.author
     }
   }
 
@@ -138,7 +138,7 @@ export const BlogSEO = ({
     '@type': 'Article',
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': url,
+      '@id': url
     },
     headline: title,
     image: featuredImages,
@@ -150,10 +150,10 @@ export const BlogSEO = ({
       name: siteMetadata.author,
       logo: {
         '@type': 'ImageObject',
-        url: `${siteMetadata.siteUrl}${siteMetadata.siteLogo}`,
-      },
+        url: `${siteMetadata.siteUrl}${siteMetadata.siteLogo}`
+      }
     },
-    description: summary,
+    description: summary
   }
 
   const twImageUrl = featuredImages[0].url
@@ -174,7 +174,7 @@ export const BlogSEO = ({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData, null, 2),
+            __html: JSON.stringify(structuredData, null, 2)
           }}
         />
       </Head>

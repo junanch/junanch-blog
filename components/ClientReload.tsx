@@ -13,7 +13,7 @@ export const ClientReload = () => {
       const socket = module.io()
       socket.on('reload', () => {
         Router.replace(Router.asPath, undefined, {
-          scroll: false,
+          scroll: false
         })
       })
     })
