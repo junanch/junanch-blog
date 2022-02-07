@@ -71,12 +71,12 @@ export default function ListLayout({
             </svg>
           </div>
         </div>
-        <ul>
+        <ul className="pb-8">
           {!filteredBlogPosts.length && 'No posts found.'}
           {groupByYear(displayPosts)?.map?.((frontMatter) => {
             if (typeof frontMatter === 'string') {
               return (
-                <h2 key={frontMatter} className="mt-4 text-2xl font-bold leading-8 tracking-tight">
+                <h2 key={frontMatter} className="pt-4 text-2xl font-bold leading-8 tracking-tight">
                   <Link
                     id={frontMatter}
                     href={`/blog/#${frontMatter}`}

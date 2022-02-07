@@ -21,7 +21,7 @@ const postDateTemplate: Intl.DateTimeFormatOptions = {
   // weekday: 'long',
   year: 'numeric',
   month: 'long',
-  day: 'numeric',
+  day: 'numeric'
 }
 
 interface Props {

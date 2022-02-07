@@ -18,10 +18,10 @@ export async function getStaticPaths() {
   return {
     paths: Object.keys(tags).map((tag) => ({
       params: {
-        tag,
-      },
+        tag
+      }
     })),
-    fallback: false,
+    fallback: false
   }
 }
 
@@ -46,15 +46,13 @@ export const getStaticProps: GetStaticProps<{ posts: PostFrontMatter[]; tag: str
 }
 
 export default function Tag({ posts, tag }: InferGetStaticPropsType<typeof getStaticProps>) {
-  // Capitalize first letter and convert space to dash
-  const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
   return (
     <>
       <TagSEO
         title={`${tag} - ${siteMetadata.title}`}
         description={`${tag} tags - ${siteMetadata.author}`}
       />
-      <ListLayout posts={posts} title={title} showTags />
+      <ListLayout posts={posts} title={'Tags'} showTags />
     </>
   )
 }

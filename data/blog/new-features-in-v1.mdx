@@ -5,7 +5,6 @@ lastmod: '2021-12-15'
 tags: ['next.js', 'tailwind', 'guide']
 draft: false
 summary: ''
-layout: PostSimple
 bibliography: references-data.bib
 ---
 
@@ -156,7 +155,7 @@ export const MDXComponents = {
   wrapper: ({ components, layout, ...rest }) => {
     const Layout = require(`../layouts/${layout}`).default
     return <Layout {...rest} />
-  },
+  }
 }
 
 export const MDXLayoutRenderer = ({ layout, mdxSource, ...rest }) => {

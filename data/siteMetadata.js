@@ -22,7 +22,7 @@ const siteMetadata = {
     plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
     simpleAnalytics: false, // true or false
     umamiWebsiteId: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
-    googleAnalyticsId: '', // e.g. UA-000000-2 or G-XXXXXXX
+    googleAnalyticsId: '' // e.g. UA-000000-2 or G-XXXXXXX
   },
   comment: {
     // Select a provider and use the environment variables associated to it
@@ -47,7 +47,7 @@ const siteMetadata = {
       // If the theme option above is set to 'custom`
       // please provide a link below to your custom theme css file.
       // example: https://giscus.app/themes/custom_example.css
-      themeURL: '',
+      themeURL: ''
     },
     utterancesConfig: {
       // Visit the link below, and follow the steps in the 'configuration' section
@@ -59,13 +59,13 @@ const siteMetadata = {
       // github-dark-orange, icy-dark, dark-blue, photon-dark, boxy-light
       theme: '',
       // theme when dark mode
-      darkTheme: '',
+      darkTheme: ''
     },
     disqusConfig: {
       // https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-      shortname: process.env.NEXT_PUBLIC_DISQUS_SHORTNAME,
-    },
-  },
+      shortname: process.env.NEXT_PUBLIC_DISQUS_SHORTNAME
+    }
+  }
 }
 
 module.exports = siteMetadata
