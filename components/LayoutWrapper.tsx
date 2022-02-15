@@ -1,5 +1,6 @@
 import SectionContainer from './SectionContainer'
 import Header from './Header'
+import Footer from './Footer'
 import { ReactNode } from 'react'
 
 interface Props {
@@ -13,6 +14,7 @@ const LayoutWrapper = ({ children }: Props) => {
       <SectionContainer>
         <div className="flex flex-col justify-between min-h-screen">
           <main className="mb-auto">{children}</main>
+          <Footer />
         </div>
       </SectionContainer>
     </>

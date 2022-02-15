@@ -1,6 +1,5 @@
 const siteMetadata = {
   title: 'Junan Blog',
-  author: 'Junan Chen',
   headerTitle: '',
   description: 'A blog created with Next.js and Tailwind.css',
   language: 'en-us',
@@ -9,13 +8,11 @@ const siteMetadata = {
   siteRepo: 'https://github.com/junanch/junanch-blog',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/social-banner.png',
+  author: 'Junan Chen',
   email: 'andyson1024@gmail.com',
-  github: 'https://github.com',
-  twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  github: 'https://github.com/junanch',
+  twitter: 'https://twitter.com/junanch',
   locale: 'en-US',
   analytics: {
     // supports plausible, simpleAnalytics, umami or googleAnalytics
@@ -27,7 +24,7 @@ const siteMetadata = {
   comment: {
     // Select a provider and use the environment variables associated to it
     // https://vercel.com/docs/environment-variables
-    provider: 'giscus', // supported providers: giscus, utterances, disqus
+    provider: '', // supported providers: giscus, utterances, disqus
     giscusConfig: {
       // Visit the link below, and follow the steps in the 'configuration' section
       // https://giscus.app/

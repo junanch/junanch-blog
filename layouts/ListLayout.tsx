@@ -71,7 +71,7 @@ export default function ListLayout({
             </svg>
           </div>
         </div>
-        <ul className="pb-8">
+        <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
           {groupByYear(displayPosts)?.map?.((frontMatter) => {
             if (typeof frontMatter === 'string') {

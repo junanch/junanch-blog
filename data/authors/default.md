@@ -2,15 +2,17 @@
 name: Junan Chen
 avatar: /static/images/avatar.png
 occupation: Web Developer
-company: xxx company
 email: andyson1024@gmail.com
-twitter: https://twitter.com/Twitter
-linkedin: https://www.linkedin.com
-github: https://github.com
+github: https://github.com/junanch
+twitter: https://twitter.com/junanch
 ---
 
-Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.
+我是一名拥有 3 年经验（专业）的软件/前端开发人员，我对技术和计算机充满热情。我很可靠，可以在团队中工作，并且可以快速学习我的兴趣是前端开发。在我的空闲时间，我喜欢音乐、游戏和阅读。同样，我喜欢旅行，看新地方，结识新朋友。
 
-He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.
+## 个人设备
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+1111
+
+## 常用软件
+
+222
