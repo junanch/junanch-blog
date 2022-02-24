@@ -56,10 +56,10 @@ app.prepare().then(() => {
               '-c',
               program.command
                 .replace(/\{event\}/gi, filePathContext)
-                .replace(/\{path\}/gi, eventContext),
+                .replace(/\{path\}/gi, eventContext)
             ],
             {
-              stdio: 'inherit',
+              stdio: 'inherit'
             }
           )
         }

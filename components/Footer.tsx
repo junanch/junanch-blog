@@ -11,14 +11,14 @@ export default function Footer() {
             <li>{` • `}</li>
             <li>{siteMetadata.title}</li>
           </ul>
-          <ul className="ml-4 flex space-x-4 items-center cursor-pointer">
-            <li>
+          <ul className="ml-4 flex space-x-2 items-center cursor-pointer">
+            <li className="p-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800">
               <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} />
             </li>
-            <li>
+            <li className="p-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800">
               <SocialIcon kind="github" href={siteMetadata.github} />
             </li>
-            <li>
+            <li className="p-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800">
               <SocialIcon kind="twitter" href={siteMetadata.twitter} />
             </li>
           </ul>
