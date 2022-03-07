@@ -9,7 +9,7 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/social-banner.png',
-  author: 'Junan Chen',
+  author: 'Junan',
   email: 'andyson1024@gmail.com',
   github: 'https://github.com/junanch',
   twitter: 'https://twitter.com/junanch',

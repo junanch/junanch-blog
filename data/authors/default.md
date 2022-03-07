@@ -1,5 +1,5 @@
 ---
-name: Junan Chen
+name: Junan
 avatar: /static/images/avatar.png
 occupation: Web Developer
 email: andyson1024@gmail.com

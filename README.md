@@ -1,3 +1,3 @@
 # My Blog
 
-generated from [timlrx/tailwind-nextjs-starter-blog](https://github.com/timlrx/tailwind-nextjs-starter-blog)
+generated from `npx degit https://github.com/timlrx/tailwind-nextjs-starter-blog.git`
