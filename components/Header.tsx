@@ -81,7 +81,7 @@ export default function Header() {
                   key={link.title}
                   href={link.href}
                   className={`py-2 px-4 font-medium text-gray-900 dark:text-gray-100 rounded hover:bg-gray-100 dark:hover:bg-gray-800 ${
-                    router.asPath === link.href ? 'font-semibold' : ''
+                    router?.asPath?.includes(link?.href) ? 'font-semibold' : ''
                   }`}
                 >
                   {link.title}

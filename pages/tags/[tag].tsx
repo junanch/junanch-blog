@@ -1,12 +1,13 @@
 import { TagSEO } from '@/components/SEO'
-import siteMetadata from '@/data/siteMetadata'
+import TagStatistics from '@/components/TagStatistics'
 import ListLayout from '@/layouts/ListLayout'
+import siteMetadata from '@/data/siteMetadata'
 import generateRss from '@/lib/generate-rss'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
-import fs from 'fs'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
+import fs from 'fs'
 import path from 'path'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 
@@ -25,10 +26,14 @@ export async function getStaticPaths() {
   }
 }
 
-export const getStaticProps: GetStaticProps<{ posts: PostFrontMatter[]; tag: string }> = async (
-  context
-) => {
-  const tag = context.params.tag as string
+export const getStaticProps: GetStaticProps<{
+  tags: Record<string, number>
+  tag: string
+  posts: PostFrontMatter[]
+}> = async (context) => {
+  const tags = await getAllTags('blog')
+
+  const tag = context?.params?.tag as string
   const allPosts = await getAllFilesFrontMatter('blog')
   const filteredPosts = allPosts.filter(
     (post) => post.draft !== true && post.tags.map((t) => kebabCase(t)).includes(tag)
@@ -42,17 +47,18 @@ export const getStaticProps: GetStaticProps<{ posts: PostFrontMatter[]; tag: str
     fs.writeFileSync(path.join(rssPath, 'feed.xml'), rss)
   }
 
-  return { props: { posts: filteredPosts, tag } }
+  return { props: { tags, tag, posts: filteredPosts } }
 }
 
-export default function Tag({ posts, tag }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Tag({ tags, tag, posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <TagSEO
         title={`${tag} - ${siteMetadata.title}`}
         description={`${tag} tags - ${siteMetadata.author}`}
       />
-      <ListLayout posts={posts} title={'Tags'} showTags />
+      <TagStatistics tags={tags} tag={tag} />
+      <ListLayout posts={posts} showTags hiddenSearch />
     </>
   )
 }
