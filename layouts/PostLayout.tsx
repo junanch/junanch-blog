@@ -9,19 +9,13 @@ import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import { ReactNode } from 'react'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 import { AuthorFrontMatter } from 'types/AuthorFrontMatter'
+import formatDate from '@/lib/utils/formatDate'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
     `${siteMetadata.siteUrl}/blog/${slug}`
   )}`
-
-const postDateTemplate: Intl.DateTimeFormatOptions = {
-  // weekday: 'long',
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric'
-}
 
 interface Props {
   frontMatter: PostFrontMatter
@@ -75,9 +69,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 <span className="block">/</span>
                 <dt className="sr-only">Published on</dt>
                 <dd className="text-base leading-4">
-                  <time dateTime={date}>
-                    {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
-                  </time>
+                  <time dateTime={date}>{formatDate(date, 'YYYY-MM-DD')}</time>
                 </dd>
                 {tags && (
                   <>

@@ -99,7 +99,7 @@ export default function ListLayout({
                 <dl className="min-w-[72px]">
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base font-medium leading-8 text-gray-500 dark:text-gray-400">
-                    <time dateTime={date}>{formatDate(date, 'MMM DD')}</time>
+                    <time dateTime={date}>{formatDate(date, 'MM/DD')}</time>
                   </dd>
                 </dl>
                 <div>
