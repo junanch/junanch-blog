@@ -12,7 +12,8 @@ const LayoutWrapper = ({ children }: Props) => {
     <>
       <Header />
       <SectionContainer>
-        <div className="flex flex-col justify-between min-h-screen">
+        {/* <div className="flex flex-col justify-between min-h-screen"> */}
+        <div className="flex flex-col justify-between" style={{ minHeight: 'calc(100vh - 72px)' }}>
           <main className="mb-auto">{children}</main>
           <Footer />
         </div>
