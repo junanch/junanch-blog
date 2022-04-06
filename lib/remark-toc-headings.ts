@@ -11,7 +11,7 @@ export default function remarkTocHeadings(options) {
       options.exportRef.push({
         value: textContent,
         url: '#' + slug(textContent),
-        depth: node.depth,
+        depth: node.depth
       })
     })
 }

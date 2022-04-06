@@ -8,7 +8,7 @@ const esca = {
   '<': '&lt;',
   '>': '&gt;',
   "'": '&#39;',
-  '"': '&quot;',
+  '"': '&quot;'
 }
 const pe = (m: keyof typeof esca) => esca[m]
 

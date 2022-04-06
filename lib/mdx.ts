@@ -73,7 +73,7 @@ export async function getFileBySlug<T>(type: 'authors' | 'blog', slug: string | 
         remarkCodeTitles,
         [remarkFootnotes, { inlineNotes: true }],
         remarkMath,
-        remarkImgToJsx,
+        remarkImgToJsx
       ]
       options.rehypePlugins = [
         ...(options.rehypePlugins ?? []),
@@ -82,19 +82,19 @@ export async function getFileBySlug<T>(type: 'authors' | 'blog', slug: string | 
         rehypeKatex,
         [
           rehypeCitation,
-          { bibliography: frontmatter?.bibliography, path: path.join(root, 'data') },
+          { bibliography: frontmatter?.bibliography, path: path.join(root, 'data') }
         ],
-        [rehypePrismPlus, { ignoreMissing: true }],
+        [rehypePrismPlus, { ignoreMissing: true }]
       ]
       return options
     },
     esbuildOptions: (options) => {
       options.loader = {
         ...options.loader,
-        '.js': 'jsx',
+        '.js': 'jsx'
       }
       return options
-    },
+    }
   })
 
   return {
@@ -105,8 +105,8 @@ export async function getFileBySlug<T>(type: 'authors' | 'blog', slug: string | 
       slug: slug || null,
       fileName: fs.existsSync(mdxPath) ? `${slug}.mdx` : `${slug}.md`,
       ...frontmatter,
-      date: frontmatter.date ? new Date(frontmatter.date).toISOString() : null,
-    },
+      date: frontmatter.date ? new Date(frontmatter.date).toISOString() : null
+    }
   }
 }
 
@@ -131,7 +131,7 @@ export async function getAllFilesFrontMatter(folder: 'blog') {
       allFrontMatter.push({
         ...frontmatter,
         slug: formatSlug(fileName),
-        date: frontmatter.date ? new Date(frontmatter.date).toISOString() : null,
+        date: frontmatter.date ? new Date(frontmatter.date).toISOString() : null
       })
     }
   })

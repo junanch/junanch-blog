@@ -24,7 +24,7 @@ export default function remarkCodeTitles() {
         name: 'div',
         attributes: [{ type: 'mdxJsxAttribute', name: 'className', value: className }],
         children: [{ type: 'text', value: title }],
-        data: { _xdmExplicitJsx: true },
+        data: { _xdmExplicitJsx: true }
       }
 
       tree.children.splice(index, 0, titleNode)
