@@ -7,12 +7,23 @@ github: https://github.com/junanch
 twitter: https://twitter.com/junanch
 ---
 
-我是一名拥有 3 年经验（专业）的软件/前端开发人员，我对技术和计算机充满热情。我很可靠，可以在团队中工作，并且可以快速学习我的兴趣是前端开发。在我的空闲时间，我喜欢音乐、游戏和阅读。同样，我喜欢旅行，看新地方，结识新朋友。
+一个普通的程序员，擅长 Web 前端开发， 对计算机技术和设计美学充满好奇，喜欢数码产品、音乐、游戏和阅读。同样，还喜欢去看新地方旅行，结识新朋友。
 
-## 个人设备
+## 数码产品
 
-1111
+- MacBook Pro 13 寸
+- iPhone XS
+- AirPods Pro
+- PS5
+- Nintendo Switch
 
 ## 常用软件
 
-222
+- Visual Studio Code
+- Chrome
+- Fork: 一个 Git 版本管理图像客户端
+- iTerm: 命令行终端
+- Alfred
+- 1Password: 密码管理工具
+- Surge
+- Spotify
