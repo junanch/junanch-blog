@@ -11,7 +11,7 @@ twitter: https://twitter.com/junanch
 
 ## 3C 数码
 
-- MacBook Pro 13 寸:
+- MacBook Pro 13 寸
 - iPhone XS
 - AirPods Pro
 - PS5
