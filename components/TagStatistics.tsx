@@ -27,7 +27,9 @@ export default function TagStatistics({ tags, tag }: Props) {
               <div key={t} className={`py-1 px-2`}>
                 <Tag
                   text={t}
-                  className={`hover:underline ${tag === t ? '!font-bold underline' : ''}`}
+                  className={`capitalize hover:underline ${
+                    tag === t ? '!font-bold underline' : ''
+                  }`}
                 />
                 <Link
                   href={`/tags/${kebabCase(t)}`}
