@@ -179,8 +179,12 @@ Mac 搜狗输入法皮肤
 
 ### [1Password for SSH & Git](https://developer.1password.com/docs/ssh/)
 
-每次换新电脑都需要重新迁移 SSH 密钥，这个是一个非常麻烦的事情，如果用 1Password 存储的话，可以轻松解决，而且以后每次 pull 代码，只需要指纹验证一下即可
-![](https://developer.1password.com/img/ssh/generate-ssh-key-github.png)
+每次换新电脑都需要重新迁移 SSH 密钥，这个是一个非常麻烦的事情，如果用 1Password 存储的话，可以轻松解决，而且以后每次 fetch、push 代码，只需要指纹验证一下即可
+
+> 可以这么理解，流程大概是这样的，我们 ssh key 不是有私钥和公钥吗？我现在把私钥 & 公钥存在 1password，然后把 里面的公钥下载到本地的 ssh 目录和 github 配置里面，私钥完全在 1password 的云端，以后每次 git 操作 push 代码，会用 ssh 里的公钥验证拉取 1password 的秘钥，1password 会验证一下密码 or 指纹，然后临时 copy 一个私钥副本作为验证，这个时候本地利用这个 ”临时秘钥“ 就可以和 github 里面的那对公钥匹配上了
+
+![](https://static.junanch.com/1edlV4-20220726.gif)
+![origin - 1password](https://developer.1password.com/img/ssh/generate-ssh-key-github.png)
 把对应的公钥下载到 `.ssh/config` 里面，然后修改 config 文件的 host，指向对应公钥就行了
 
 ```bash
