@@ -92,7 +92,21 @@ layout: PostLayout
 
 ### [Manico](https://manico.im/) (收费)
 
-快捷键启动程序
+快捷键启动程序，配合 karabiner 改键，SpaceFN + [asdfgtuiop] 的配置
+![](https://static.junanch.com/0yAaCo-20220726.png)
+
+### [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
+
+键位修改，灵活配置组合快捷键，这个是我目前使用的改建配置功能 & [配置地址](https://www.dropbox.com/s/pnzfnrl7lfzpktk/karabiner.json?dl=0)
+
+- SpaceFN: Space enables SpaceFN mode
+- SpaceFN: Space + b to Space (hold to repeat)
+- SpaceFN: Space + [hjkl] to Left, Down, Up, Right
+- SpaceFN: Space + [123456789=-] to F[1-12]
+- SPaceFN: Space + [asdfgtuiop] to left_control + left_shift + left \_option + left_command + [asdfgtuiop]
+- right_command to left_shift + left_option + left_command + leftcontrol
+- backquote to Esc, left_control + Esc to backquote, left_shift + Esc to ~
+- left_shift to left_control + spacebar (switch pervious input source)
 
 ### [uPic](https://github.com/gee1k/uPic)
 
@@ -117,21 +131,6 @@ layout: PostLayout
 ### [PDF Expert](https://pdfexpert.com/zh) (收费)
 
 PDF 预览编辑、标注等
-
-### [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
-
-键位修改，灵活配置组合快捷键，这个是我目前使用的改建配置功能 & [配置地址](https://www.dropbox.com/s/pnzfnrl7lfzpktk/karabiner.json?dl=0)
-
-- SpaceFN: Space enables SpaceFN mode
-- SpaceFN: Space + b to Space (hold to repeat)
-- SpaceFN: Space + [hjkl] to Left, Down, Up, Right
-- SpaceFN: Space + [1-9] to F[1-9], Space + 0 to F10, Space + Hyphen (-) to F11, Space + Equal Sign (=) to F12
-- ` to Esc
-- left_control + Esc to `
-- left_shift + Esc to ~
-- left_shift to switch previous input source
-- double Apple Internal Keyboard fn to F13
-- right_command to left_shift + left_command + left_control + left_option
 
 ### [Dato](https://sindresorhus.com/dato) (收费)
 
