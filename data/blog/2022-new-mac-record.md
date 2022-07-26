@@ -229,7 +229,7 @@ git 配置好后就可以克隆项目了
 ![](https://static.junanch.com/VJC5bD-20220725.png)
 我通常是用一个定时任务每天跑一个备份，把安装的软件和偏好设置，备份到相对于的地方。mac 可以使用 `crontab -e` 定时触发你备份脚本
 
-- [定期自动云备份 macOS 软件列表，维护一份属于自己的必备 Apjp 清单](https://sspai.com/post/43265)
+- [定期自动云备份 macOS 软件列表，维护一份属于自己的必备 App 清单](https://sspai.com/post/43265)
 
 ```bash
   ls -l /Applications | awk '{print $3"\t", $0}' | sort > ~/.backupfile/AppList && osascript -e 'display notification "~/.backupfile/Applist backup" with title "Applist" '
