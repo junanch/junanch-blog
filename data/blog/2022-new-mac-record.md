@@ -6,6 +6,8 @@ draft: false
 layout: PostLayout
 ---
 
+![](https://static.junanch.com/NQyCOf-20220726.png)
+
 趁着这次还新的 MacBook Pro M1 Pro，记录一下自己日常使用的 App、配置的还原。
 
 ## macOS 常用的软件
@@ -30,6 +32,9 @@ layout: PostLayout
 ### [Rectangle](https://rectangleapp.com/)
 
 使用键盘快捷键移动和调整窗口大小
+
+![](https://static.junanch.com/Wxz1lB-20220726.png)
+![](https://static.junanch.com/2qX7Cy-20220726.png)
 
 ### [Keka](https://www.keka.io/zh-cn/)
 
@@ -148,7 +153,7 @@ Git GUI 工具，看 Git 分支提交记录时更加直观、清晰
 
 ### [Drafts](https://getdrafts.com/)
 
-快速收集想法、笔记、待完成的任务，之后整理一下再输入到其他 App，当 iOS & Mac 复制剪切板智障时可以暂时替代
+快速收集想法、笔记、待完成的任务，之后整理一下再输入到其他 App，支持 iOS & macOS 双平台数据同步，当 iCloud 剪切板数据同步智障时可以暂时替代
 
 ### [Typora](https://typora.io/)
 
@@ -185,6 +190,7 @@ Mac 搜狗输入法皮肤
 
 ![](https://static.junanch.com/1edlV4-20220726.gif)
 ![origin - 1password](https://developer.1password.com/img/ssh/generate-ssh-key-github.png)
+
 把对应的公钥下载到 `.ssh/config` 里面，然后修改 config 文件的 host，指向对应公钥就行了
 
 ```bash
