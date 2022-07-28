@@ -38,6 +38,10 @@ module.exports = {
               },
               code: { color: theme('colors.primary.400') }
             },
+            img: {
+              marginTop: '1.25em',
+              marginBottom: '1.25em'
+            },
             h1: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
