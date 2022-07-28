@@ -108,6 +108,8 @@ layout: PostLayout
 - backquote to Esc, left_control + Esc to backquote, left_shift + Esc to ~
 - left_shift to left_control + spacebar (switch pervious input source)
 
+![](https://static.junanch.com/TvkqRD-20220728.png)
+
 ### [uPic](https://github.com/gee1k/uPic)
 
 图床上传客户端，上传到自己的 OSS
