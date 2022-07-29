@@ -111,6 +111,10 @@ layout: PostLayout
 
 ![](https://static.junanch.com/TvkqRD-20220728.png)
 
+#### Tips
+
+单纯的空格键 + [asdfgtyuiop] 键位触发，首先会有个多键位冲突问题，其次空格键触发有两个触发点，分别是按下、抬起，我所希望的仅仅是按住空格键后 + 字母键才触发 Manico，如果抬起空格键 + 字母键也会触发的话，那就会和平时打字冲突，日常打字手速太快的话会有很高频率触发抬起空格键 + 字母键
+
 ### [uPic](https://github.com/gee1k/uPic)
 
 图床上传客户端，上传到自己的 OSS
