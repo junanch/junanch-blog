@@ -25,7 +25,7 @@ module.exports = {
       colors: {
         primary: colors.blue,
         //@ts-ignore
-        gray: colors.slate // TODO: Remove ts-ignore after tw types gets updated to v3
+        gray: colors.slate
       },
       typography: (theme) => ({
         DEFAULT: {

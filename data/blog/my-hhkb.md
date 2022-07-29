@@ -1,7 +1,8 @@
 ---
 title: 我的 HHKB 键盘
 date: '2020-05-18'
-tags: ['blog']
+lastmod: '2022-07-28'
+tags: ['Keyboard']
 draft: false
 layout: PostLayout
 ---

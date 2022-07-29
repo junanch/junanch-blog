@@ -1,7 +1,7 @@
 ---
 title: 2022 年博客改版
 date: '2022-04-18'
-tags: ['blog']
+tags: ['Blog', 'TailwindCSS']
 draft: false
 layout: PostLayout
 ---
