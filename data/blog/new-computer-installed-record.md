@@ -98,7 +98,7 @@ layout: PostLayout
 
 ### [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
 
-键位修改，灵活配置组合快捷键，这个是我目前使用的改建配置功能 & [配置地址](https://www.dropbox.com/s/pnzfnrl7lfzpktk/karabiner.json?dl=0)
+键位修改，灵活配置组合快捷键，这个是我目前使用的改建配置功能 & [配置地址](https://github.com/junanch/dotfiles/blob/main/mackup/.config/karabiner/karabiner.json)
 
 - SpaceFN: Space enables SpaceFN mode
 - SpaceFN: Space + b to Space (hold to repeat)
