@@ -8,7 +8,7 @@ layout: PostLayout
 
 ![https://static.junanch.com/lRTleW-20220517.jpg](https://static.junanch.com/lRTleW-20220517.jpg)
 
-搭建博客的基本原理就是使用 Notion 作为 CMS，然后通过 [Next.js](https://nextjs.org/)、[react-notion](https://github.com/splitbee/react-notion)、w[react-notion-x](https://github.com/NotionX/react-notion-x) 从 Notion 里获取内容并呈现出来，然后将网站的代码部署到 [Vercel](http://vercel.com/)。
+搭建博客的基本原理就是使用 Notion 作为 CMS，然后通过 [Next.js](https://nextjs.org/)、[react-notion](https://github.com/splitbee/react-notion)、[wreact-notion-x](https://github.com/NotionX/react-notion-x) 从 Notion 里获取内容并呈现出来，然后将网站的代码部署到 [Vercel](http://vercel.com/)。
 
 这样做不仅可以使网站干净、整洁，方便自己二次定制网站，而且之后的文章都可以在 Notion 上编辑更新，不用每次都需要手动拉取仓库、编写 Markdown、推送代码这一系列操作 (缺点是没有 Git 版本管理)，也不用担心图床的问题，可以把图片直接存储到 Notion 上，并且可以利用 Next.js + Vercel 的 [增量式更新](https://nextjs.org/docs/basic-features/data-fetching#incremental-static-regeneration)，可以在更新 Notion 的文章后无需重复 build，只需要刷新一下博客网站就会自动更新内容，相比以往每次发布更新文章都需要手动去重新构建一次博客网站真的方便很多 🥳。
 
@@ -43,8 +43,8 @@ Next.js 它提供了一种预渲染的形式，只要你在它提供的 getStati
 
 ## 参考 Link
 
-- [https://blog.spencerwoo.com/2021/02/nextjs-blog-notion](https://blog.spencerwoo.com/2021/02/nextjs-blog-notion)
-- [https://splitbee.io/blog/notion-as-cms-using-nextjs](https://splitbee.io/blog/notion-as-cms-using-nextjs)
-- [https://transitivebullsh.it/nextjs-notion-starter-kit](https://transitivebullsh.it/nextjs-notion-starter-kit)
-- [https://github.com/ijjk/notion-blog](https://github.com/ijjk/notion-blog)
-- [https://sspai.com/post/66678](https://sspai.com/post/66678)
+- [Powering my blog with Notion - Spencerwoo](https://blog.spencerwoo.com/2021/02/nextjs-blog-notion)
+- [Building a blog with Notion & Next.js - Splitbee](https://splitbee.io/blog/notion-as-cms-using-nextjs)
+- [Next.js Notion Starter Kit - Travis Fischer](https://transitivebullsh.it/nextjs-notion-starter-kit)
+- [ijjk/notion-blog](https://github.com/ijjk/notion-blog)
+- [用 Notion 部署你的个人博客](https://sspai.com/post/66678)
