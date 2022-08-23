@@ -19,7 +19,7 @@ layout: PostLayout
 
 ![](https://static.junanch.com/t8Ia4w-20220725.png)
 ![](https://static.junanch.com/JvAet0-20220725.png)
-![](https://static.junanch.com/ZzM94s-20220725.png)
+![](https://static.junanch.com/ohN7tH-20220823.png)
 
 ### [Bob](https://bobtranslate.com/)
 
@@ -144,10 +144,27 @@ PDF 预览编辑、标注等
 时间、日历一起展示，UI 样式和原生一致，之前打折的时候购入
 ![](https://sindresorhus.com/assets/dato/screenshot2.jpg)
 
-### [iTerm](https://iterm2.com/)
+### [iTerm](https://iterm2.com/) 终端
 
 命令行输入的终端，可以使用 Minimal 这个选项可以把导航栏缩小
 ![](https://static.junanch.com/rMKJb1-20220726.png)
+
+**oh-my-zsh**:
+
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)：命令自动提示
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)：命令语法高亮
+- [zsh-completions](https://github.com/zsh-users/zsh-completions)：zsh 包管理，升级更新
+- [zsh-you-should-use](https://github.com/MichaelAquilina/zsh-you-should-use)：把历史命令转化简短别名
+- [git-open](https://github.com/paulirish/git-open)：打开 git 仓库
+
+**提示**
+
+- [spaceship](https://spaceship-prompt.sh/zh/)
+- [pure](https://github.com/sindresorhus/pure)
+
+### [Fig](https://fig.io/)
+
+命令行提示
 
 ### [Charles](https://www.charlesproxy.com/)
 
