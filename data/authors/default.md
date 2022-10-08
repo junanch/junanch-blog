@@ -7,7 +7,7 @@ github: https://github.com/junanch
 twitter: https://twitter.com/junanch
 ---
 
-一个懂点 web 前端开发的人，对计算机技术和设计美学充满兴趣，喜欢数码产品、听音乐、看小说、玩游戏。
+一个懂点 web 前端开发的人，对计算机技术和设计美学充满兴趣，喜欢数码产品、听音乐、听播客、看小说、玩游戏。
 
 ## 常用的数码产品
 
