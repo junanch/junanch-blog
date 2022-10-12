@@ -9,7 +9,6 @@ Run node `./scripts/compose.js` to generate a new blog.
 **[Frontmatter](https://tailwind-nextjs-starter-blog.vercel.app/blog/introducing-tailwind-nextjs-starter-blog#frontmatter)**
 
 ```Markdown
----
 title (required): 'blog title'
 tags (required): ['tool']
 date (required): '2021-01-12'
