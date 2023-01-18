@@ -109,7 +109,7 @@ export default function ListLayout({
                     </Link>
                   </h3>
                   {showTags && tags?.length > 0 && (
-                    <div className="flex flex-wrap capitalize">
+                    <div className="flex flex-wrap">
                       {tags?.map?.((tag) => (
                         <Tag key={tag} text={tag} />
                       ))}

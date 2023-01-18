@@ -1,7 +1,7 @@
 ---
 title: 2022 新电脑装机记录
 date: '2022-07-26'
-tags: ['Computer', 'Mac', 'Tool']
+tags: ['Apps', 'Configs', 'Mac', 'Backup']
 draft: false
 images: ['https://static.junanch.com/NQyCOf-20220726.png']
 layout: PostLayout

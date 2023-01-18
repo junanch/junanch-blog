@@ -1,7 +1,7 @@
 ---
 title: 新的图床方案 Cloudflare + Backblaze
 date: '2022-04-22'
-tags: ['Storage', 'Cloudflare']
+tags: ['Image', 'Storage', 'Cloudflare']
 draft: false
 layout: PostLayout
 ---

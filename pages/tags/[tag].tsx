@@ -31,7 +31,7 @@ export const getStaticProps: GetStaticProps<{
   tag: string
   posts: PostFrontMatter[]
 }> = async (context) => {
-  const tags = await getAllTags('blog')
+  const tags = await getAllTags('blog', { kebabCase: false })
 
   const tag = context?.params?.tag as string
   const allPosts = await getAllFilesFrontMatter('blog')
@@ -47,10 +47,10 @@ export const getStaticProps: GetStaticProps<{
     fs.writeFileSync(path.join(rssPath, 'feed.xml'), rss)
   }
 
-  return { props: { tags, tag, posts: filteredPosts } }
+  return { props: { tag, tags, posts: filteredPosts } }
 }
 
-export default function Tag({ tags, tag, posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Tag({ tag, tags, posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <TagSEO

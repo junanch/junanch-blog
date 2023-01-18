@@ -2,7 +2,7 @@
 title: 我的 HHKB 键盘
 date: '2020-05-18'
 lastmod: '2022-07-28'
-tags: ['Keyboard']
+tags: ['Keyboard', 'ShortcutKeys']
 draft: false
 layout: PostLayout
 ---

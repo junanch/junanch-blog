@@ -11,7 +11,7 @@ export const getStaticProps: GetStaticProps<{
   tags: Record<string, number>
   posts: PostFrontMatter[]
 }> = async () => {
-  const tags = await getAllTags('blog')
+  const tags = await getAllTags('blog', { kebabCase: false })
   const allPosts = await getAllFilesFrontMatter('blog')
 
   return { props: { tags, posts: allPosts } }

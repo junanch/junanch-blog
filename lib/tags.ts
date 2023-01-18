@@ -7,7 +7,11 @@ import kebabCase from './utils/kebabCase'
 
 const root = process.cwd()
 
-export async function getAllTags(type: 'blog' | 'authors') {
+interface Options {
+  kebabCase: boolean
+}
+
+export async function getAllTags(type: 'blog' | 'authors', options: Options = { kebabCase: true }) {
   const files = getFiles(type)
 
   const tagCount: Record<string, number> = {}
@@ -18,7 +22,7 @@ export async function getAllTags(type: 'blog' | 'authors') {
     const data = matterFile.data as PostFrontMatter
     if (data.tags && data.draft !== true) {
       data.tags.forEach((tag) => {
-        const formattedTag = kebabCase(tag)
+        const formattedTag = options.kebabCase ? kebabCase(tag) : tag
         if (formattedTag in tagCount) {
           tagCount[formattedTag] += 1
         } else {

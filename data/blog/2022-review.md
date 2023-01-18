@@ -1,7 +1,7 @@
 ---
 title: 2022年记录和思考
 date: '2023-01-15'
-tags: ['Review']
+tags: ['Yearly', 'Review']
 draft: false
 layout: PostLayout
 ---

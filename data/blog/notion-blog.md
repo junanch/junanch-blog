@@ -1,7 +1,7 @@
 ---
 title: Notion 博客搭建记录
 date: '2021-04-25'
-tags: ['Blog', 'Notion']
+tags: ['Notion', 'Blog']
 draft: false
 layout: PostLayout
 ---
