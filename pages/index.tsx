@@ -3,7 +3,6 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { PostFrontMatter } from 'types/PostFrontMatter'
-import ListLayout from '@/layouts/ListLayout'
 
 export const getStaticProps: GetStaticProps<{
   posts: PostFrontMatter[]
@@ -14,10 +13,10 @@ export const getStaticProps: GetStaticProps<{
 }
 
 export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+  // redirect to blog
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <ListLayout posts={posts} initialDisplayPosts={posts} title="All Posts" />
     </>
   )
 }

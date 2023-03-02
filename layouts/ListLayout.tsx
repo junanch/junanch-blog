@@ -4,6 +4,7 @@ import { ComponentProps, useState } from 'react'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
 import { PostFrontMatter } from 'types/PostFrontMatter'
+
 interface Props {
   posts: PostFrontMatter[]
   title?: string
