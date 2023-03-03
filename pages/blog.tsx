@@ -1,32 +1,33 @@
+import { ComponentProps, useState } from 'react'
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import siteMetadata from '@/data/siteMetadata'
-import ListLayout from '@/layouts/ListLayout'
+import ListLayout from '@/layouts/ListLayout2'
 import { PageSEO } from '@/components/SEO'
-import { GetStaticProps, InferGetStaticPropsType } from 'next'
-import { ComponentProps } from 'react'
+import SearchBar from '@/components/SearchBar'
 
 export const POSTS_PER_PAGE = 5
 
 export const getStaticProps: GetStaticProps<{
   posts: ComponentProps<typeof ListLayout>['posts']
-  initialDisplayPosts: ComponentProps<typeof ListLayout>['initialDisplayPosts']
-  pagination: ComponentProps<typeof ListLayout>['pagination']
 }> = async () => {
   const posts = await getAllFilesFrontMatter('blog')
-  const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE)
-  const pagination = {
-    currentPage: 1,
-    totalPages: Math.ceil(posts.length / POSTS_PER_PAGE)
-  }
 
-  return { props: { initialDisplayPosts, posts, pagination } }
+  return { props: { posts } }
 }
 
 export default function Blog({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+  const [searchValue, setSearchValue] = useState<string>('')
+  const [showTags, setShowTags] = useState<boolean>(false)
   return (
     <>
       <PageSEO title={`Blog - ${siteMetadata.author}`} description={siteMetadata.description} />
-      <ListLayout posts={posts} initialDisplayPosts={posts} title="All Posts" />
+      <SearchBar
+        onSearch={(value) => setSearchValue(value)}
+        showTags={showTags}
+        onShowTags={(state) => setShowTags(state)}
+      />
+      <ListLayout posts={posts} searchValue={searchValue} showTags={showTags} />
     </>
   )
 }

@@ -1,6 +1,6 @@
 import { PageSEO } from '@/components/SEO'
 import TagStatistics from '@/components/TagStatistics'
-import ListLayout from '@/layouts/ListLayout'
+import ListLayout from '@/layouts/ListLayout2'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllTags } from '@/lib/tags'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
@@ -22,7 +22,7 @@ export default function Tags({ tags, posts }: InferGetStaticPropsType<typeof get
     <>
       <PageSEO title={`Tags - ${siteMetadata.author}`} description="Things I blog about" />
       <TagStatistics tags={tags} />
-      <ListLayout posts={posts} showTags hiddenSearch />
+      <ListLayout posts={posts} showTags />
     </>
   )
 }
