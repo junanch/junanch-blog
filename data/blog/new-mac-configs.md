@@ -41,7 +41,9 @@ layout: PostLayout
 
 文件压缩、解压
 
-### [Mos](https://mos.caldis.me/)
+### [~~Mos~~](https://mos.caldis.me/)
+
+> update: 更换为 LinearMouse
 
 鼠标滚轮方向切换，Mac 外接的鼠标滚轮方向和它的触控板滑动方向是一致的，所以有别于 Windowns 鼠标滚轮的方向
 
@@ -54,7 +56,9 @@ layout: PostLayout
 
 视频播放器
 
-### [Alfred](https://www.alfredapp.com/) (收费)
+### [~~Alfred~~](https://www.alfredapp.com/) （付费）
+
+> update: 彻底更换为 Raycast
 
 快捷搜索启动应用程序、系统命令(降低音量、清理垃圾)、文件搜索、计算器、剪切板历史...
 
@@ -62,38 +66,42 @@ layout: PostLayout
 
 快捷搜索启动应用程序、系统命令(降低音量、清理垃圾)、文件搜索、计算器、窗口管理、剪切板历史...
 
-### [1Password](https://1password.com/zh-cn/) (收费)
+### [1Password](https://1password.com/zh-cn/) （付费）
 
 全平台密码管理工具，体验很丝滑
 
-### [Bitwarden](https://bitwarden.com/)
+### [~~Bitwarden~~](https://bitwarden.com/)
+
+> 1Password 的备份方案
 
 密码管理软件，基础功能免费
 
-### [Bartendbar](https://www.macbartender.com/) (收费)
+### [Bartendbar](https://www.macbartender.com/) （付费）
 
 菜单栏图标管理，一定程度上解决 “刘海屏” 隐藏图标的问题
 ![](https://www.macbartender.com/Bartender4/img/BartenderBar@2x.png)
 
-### [Hidden Bar](https://github.com/dwarvesf/hidden)
+### [~~Hidden Bar~~](https://github.com/dwarvesf/hidden)
+
+> Bartendbar 的备份方案
 
 菜单栏图标管理，简单好用
 
-### [CleanShot X](https://cleanshot.com/) (收费)
+### [CleanShot X](https://cleanshot.com/) （付费）
 
 区域截图、滚动截图、GIF 录制、箭头文字标注，附送云空间
 
-### [One Switch](https://fireball.studio/oneswitch/) (收费)
+### [One Switch](https://fireball.studio/oneswitch/) （付费）
 
 快捷开关，连接耳机、屏幕清洁、隐藏桌面 App、麦克风静音、Dark/Light 模式切换、低电量模式...
 
-### [PasteNow](https://pastenow.app/) (收费)
+### [PasteNow](https://pastenow.app/) （付费）
 
 历史剪切板工具，iOS & Mac 双平台数据同步
 
-### [Manico](https://manico.im/) (收费)
+### [Manico](https://manico.im/) （付费）
 
-快捷键启动程序，配合 karabiner 改键，SpaceFN + [asdfgtuiop] 的配置
+快捷键启动程序，配合下面的一款软件 karabiner 使用，改键 SpaceFN + [asdfgtuiop] 的配置
 ![](https://static.junanch.com/0yAaCo-20220726.png)
 
 ### [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
@@ -104,7 +112,7 @@ layout: PostLayout
 - SpaceFN: Space + b to Space (hold to repeat)
 - SpaceFN: Space + [hjkl] to Left, Down, Up, Right
 - SpaceFN: Space + [123456789=-] to F[1-12]
-- SPaceFN: Space + [asdfgtuiop] to left_control + left_shift + left \_option + left_command + [asdfgtuiop]
+- SPaceFN: Space + [asdfgertuiopm] to left_control + left_shift + left \_option + left_command + [asdfgertuiopm]
 - right_command to left_shift + left_option + left_command + leftcontrol
 - backquote to Esc, left_control + Esc to backquote, left_shift + Esc to ~
 - left_shift to left_control + spacebar (switch pervious input source)
@@ -119,11 +127,11 @@ layout: PostLayout
 
 图床上传客户端，上传到自己的 OSS
 
-### [Downie](https://software.charliemonroe.net/downie/) (收费)
+### [Downie](https://software.charliemonroe.net/downie/) （付费）
 
 在线视频下载，类似 YouTube、B 站、Twitter 等网站均可直接下载视频
 
-### [Permute](https://software.charliemonroe.net/permute/) (收费)
+### [Permute](https://software.charliemonroe.net/permute/) （付费）
 
 允许你转换视频，音频和图像文件为不同的格式，增加音量，合并他们 (多个视频流合并成一个视频)，下载下来的视频可以转成 GIF
 
@@ -135,11 +143,11 @@ layout: PostLayout
 
 思维导图
 
-### [PDF Expert](https://pdfexpert.com/zh) (收费)
+### [PDF Expert](https://pdfexpert.com/zh) （付费）
 
-PDF 预览编辑、标注等
+PDF 预览编辑、标注等，实践下来发现自己不太常用
 
-### [Dato](https://sindresorhus.com/dato) (收费)
+### [Dato](https://sindresorhus.com/dato) （付费）
 
 时间、日历一起展示，UI 样式和原生一致，之前打折的时候购入
 ![](https://sindresorhus.com/assets/dato/screenshot2.jpg)
@@ -162,7 +170,9 @@ PDF 预览编辑、标注等
 - [spaceship](https://spaceship-prompt.sh/zh/)
 - [pure](https://github.com/sindresorhus/pure)
 
-### [Fig](https://fig.io/)
+### [~~Fig~~](https://fig.io/)
+
+> update: 弃用
 
 命令行提示
 
@@ -184,9 +194,11 @@ Git GUI 工具，看 Git 分支提交记录时更加直观、清晰
 
 ### [Obsidian](https://obsidian.md/)
 
-个人笔记工具，包含 iOS 和 Mac 端，本地 Markdown 编辑实时预览、双向链接
+个人笔记工具（主要是笔记的存档），包含 iOS 和 Mac 端，本地 Markdown 编辑实时预览、双向链接，主要是方便手机和电脑跨端查看
 
 ### [Spark](https://sparkmailapp.com/)
+
+> 多个邮箱的邮件聚合处理
 
 多账号邮箱管理，通知分类 & 智能通知 (将陌生人和垃圾信息设置为静音)
 
@@ -194,7 +206,9 @@ Git GUI 工具，看 Git 分支提交记录时更加直观、清晰
 
 日常开发编辑器，github 账号同步配置
 
-### [wxRead](https://qpluspicture.oss-cn-beijing.aliyuncs.com/TWtdSF/WeRead_0.2.0_universal.dmg)
+### [~~wxRead~~](https://qpluspicture.oss-cn-beijing.aliyuncs.com/TWtdSF/WeRead_0.2.0_universal.dmg)
+
+> update: 弃用
 
 微信读书的 Mac 版本 3.6 MB，内嵌网页
 
