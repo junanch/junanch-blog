@@ -22,6 +22,7 @@ export default function Footer() {
               <SocialIcon kind="twitter" href={siteMetadata.twitter} />
             </li>
           </ul>
+          <p className="ml-4">👋 hi~ hello world 🌍</p>
         </div>
       </div>
     </footer>
