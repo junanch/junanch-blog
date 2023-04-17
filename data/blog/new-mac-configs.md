@@ -11,12 +11,9 @@ layout: PostLayout
 
 趁着这次还新的 MacBook Pro M1 Pro，记录一下自己日常使用的 App、配置的还原。
 
-## macOS 常用的软件
+## macOS 软件
 
 收费软件自然有它的收费原因，无论是在日常维护或者体验上，而且买东西最重要就是图个自己喜欢、开心，用着舒服。
-
-### 截图
-
 ![](https://static.junanch.com/t8Ia4w-20220725.png)
 ![](https://static.junanch.com/JvAet0-20220725.png)
 ![](https://static.junanch.com/ohN7tH-20220823.png)
@@ -24,6 +21,7 @@ layout: PostLayout
 ### [Bob](https://bobtranslate.com/)
 
 高效、快速的翻译软件，官网文档描述的非常清楚，有社区版和 Pro 版
+![](https://cdn.ripperhe.com/oss/master/2022/0508/translate_selection.gif)
 
 ### [AltTab](https://alt-tab-macos.netlify.app/)
 
@@ -32,8 +30,7 @@ layout: PostLayout
 
 ### [Rectangle](https://rectangleapp.com/)
 
-使用键盘快捷键移动和调整窗口大小
-
+使用键盘快捷键进行窗口管理
 ![](https://static.junanch.com/Wxz1lB-20220726.png)
 ![](https://static.junanch.com/2qX7Cy-20220726.png)
 
@@ -43,7 +40,7 @@ layout: PostLayout
 
 ### [~~Mos~~](https://mos.caldis.me/)
 
-> update: 更换为 LinearMouse
+> update: 更换为 [LinearMouse](https://linearmouse.app/zh-CN/)
 
 鼠标滚轮方向切换，Mac 外接的鼠标滚轮方向和它的触控板滑动方向是一致的，所以有别于 Windowns 鼠标滚轮的方向
 
@@ -64,7 +61,9 @@ layout: PostLayout
 
 ### [Raycast](https://www.raycast.com/)
 
-快捷搜索启动应用程序、系统命令(降低音量、清理垃圾)、文件搜索、计算器、窗口管理、剪切板历史...
+快捷搜索启动应用程序、系统命令(降低音量、清理垃圾)、文件搜索、计算器、窗口管理、剪切板历史、设置快捷键 ...
+
+> update: 更新替换 Manico ![Raycast HotKey](https://static.junanch.com/aqeLpX-20230417.png)
 
 ### [1Password](https://1password.com/zh-cn/) （付费）
 
@@ -99,29 +98,27 @@ layout: PostLayout
 
 历史剪切板工具，iOS & Mac 双平台数据同步
 
-### [Manico](https://manico.im/) （付费）
+### [~~Manico~~](https://manico.im/) （付费）
 
-快捷键启动程序，配合下面的一款软件 karabiner 使用，改键 SpaceFN + [asdfgtuiop] 的配置
-![](https://static.junanch.com/0yAaCo-20220726.png)
+快捷键启动程序，配合 Karabiner-Elments 使用，目的是避免快捷键重复的情况下能够快速开启/关闭某个应用，方便摸鱼 🌝。
+![](https://static.junanch.com/cFbs8D-20230410.png)
 
 ### [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
 
 键位修改，灵活配置组合快捷键，这个是我目前使用的改建配置功能 & [配置地址](https://github.com/junanch/dotfiles/blob/main/mackup/.config/karabiner/karabiner.json)
 
-- SpaceFN: Space enables SpaceFN mode
-- SpaceFN: Space + b to Space (hold to repeat)
-- SpaceFN: Space + [hjkl] to Left, Down, Up, Right
-- SpaceFN: Space + [123456789=-] to F[1-12]
-- SPaceFN: Space + [asdfgertuiopm] to left_control + left_shift + left \_option + left_command + [asdfgertuiopm]
-- right_command to left_shift + left_option + left_command + leftcontrol
+- SpaceFN: SpaceBar enables SpaceFN mode
+- SpaceFN: SpaceBar + b to SpaceBar (hold to repeat)
+- SpaceFN: SpaceBar + [h/j/k/l] to Left, Down, Up, Right
+- SpaceFN: SpaceBar + [1/2/3/4/5/6/7/8/9/=/-] to F[1~12]
+- SPaceFN: SpaceBar + [a/s/d/f/g/e/r/t/u/i/o/p/m] to [left_control + left_shift + left_option + left_command] + [a/s/d/f/g/e/r/t/u/i/o/p/m]
+- right_command to [left_shift + left_option + left_command + left_control]
 - backquote to Esc, left_control + Esc to backquote, left_shift + Esc to ~
-- left_shift to left_control + spacebar (switch pervious input source)
+- left_shift to left_control + SpaceBar (switch pervious input source)
 
-![](https://static.junanch.com/TvkqRD-20220728.png)
+![Karabiner config](https://static.junanch.com/TvkqRD-20220728.png)
 
-#### Tips
-
-单纯的空格键 + [asdfgtyuiop] 键位触发，首先会有个多键位冲突问题，其次空格键触发有两个触发点，分别是按下、抬起，我所希望的仅仅是按住空格键后 + 字母键才触发 Manico，如果抬起空格键 + 字母键也会触发的话，那就会和平时打字冲突，日常打字手速太快的话会有很高频率触发抬起空格键 + 字母键
+> 单纯的空格键 + [a/s/d/f/g/e/r/t/u/i/o/p/m] 键位触发，首先会有个多键位冲突问题，其次空格键触发有两个触发点，分别是按下、抬起，我所希望的仅仅是按住空格键后 + 字母键才触发 Manico，如果抬起空格键 + 字母键也会触发的话，那就会和平时打字冲突，日常打字手速太快的话会有很高频率触发抬起空格键 + 字母键
 
 ### [uPic](https://github.com/gee1k/uPic)
 
@@ -202,15 +199,9 @@ Git GUI 工具，看 Git 分支提交记录时更加直观、清晰
 
 多账号邮箱管理，通知分类 & 智能通知 (将陌生人和垃圾信息设置为静音)
 
-### [Visual Studio Code]()
+### [Visual Studio Code](https://code.visualstudio.com/)
 
 日常开发编辑器，github 账号同步配置
-
-### [~~wxRead~~](https://qpluspicture.oss-cn-beijing.aliyuncs.com/TWtdSF/WeRead_0.2.0_universal.dmg)
-
-> update: 弃用
-
-微信读书的 Mac 版本 3.6 MB，内嵌网页
 
 ### [Graphite 石墨](https://github.com/xiaochunjimmy/Sogou-Input-Skin)
 
@@ -226,7 +217,7 @@ Mac 搜狗输入法皮肤
 > 可以这么理解，流程大概是这样的，我们 ssh key 不是有私钥和公钥吗？我现在把私钥 & 公钥存在 1password，然后把里面的公钥下载到本地的 ssh 目录和 github 配置里面，私钥完全在 1password 的云端，以后每次 git 操作 push 代码，会用 ssh 里的公钥验证拉取 1password 的秘钥，1password 会验证一下密码 or 指纹，然后临时 copy 一个私钥副本作为验证，这个时候本地利用这个 ”临时秘钥“ 就可以和 github 里面的那对公钥匹配上了
 
 ![](https://static.junanch.com/1edlV4-20220726.gif)
-![origin - 1password](https://developer.1password.com/img/ssh/generate-ssh-key-github.png)
+![](https://static.junanch.com/dDOrCf-20230417.png)
 
 把对应的公钥下载到 `.ssh/config` 里面，然后修改 config 文件的 host，指向对应公钥就行了
 
