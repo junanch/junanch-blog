@@ -28,11 +28,13 @@ layout: PostLayout
 窗口切换，App 内容先预览确保可以切换到你想要的窗口
 ![](https://alt-tab-macos.netlify.app/public/demo/frontpage.jpg)
 
-### [Rectangle](https://rectangleapp.com/)
+### [~~Rectangle~~](https://rectangleapp.com/)
 
 使用键盘快捷键进行窗口管理
 ![](https://static.junanch.com/Wxz1lB-20220726.png)
 ![](https://static.junanch.com/2qX7Cy-20220726.png)
+
+> Update：更换为 Raycast Commands Window Management ![Raycast Commands Window Management](https://static.junanch.com/yelENa-20230417.png)
 
 ### [Keka](https://www.keka.io/zh-cn/)
 
@@ -40,7 +42,7 @@ layout: PostLayout
 
 ### [~~Mos~~](https://mos.caldis.me/)
 
-> update: 更换为 [LinearMouse](https://linearmouse.app/zh-CN/)
+> Update：更换为 [LinearMouse](https://linearmouse.app/zh-CN/)
 
 鼠标滚轮方向切换，Mac 外接的鼠标滚轮方向和它的触控板滑动方向是一致的，所以有别于 Windowns 鼠标滚轮的方向
 
@@ -55,15 +57,13 @@ layout: PostLayout
 
 ### [~~Alfred~~](https://www.alfredapp.com/) （付费）
 
-> update: 彻底更换为 Raycast
+> Update：彻底更换为 Raycast
 
 快捷搜索启动应用程序、系统命令(降低音量、清理垃圾)、文件搜索、计算器、剪切板历史...
 
 ### [Raycast](https://www.raycast.com/)
 
 快捷搜索启动应用程序、系统命令(降低音量、清理垃圾)、文件搜索、计算器、窗口管理、剪切板历史、设置快捷键 ...
-
-> update: 更新替换 Manico ![Raycast HotKey](https://static.junanch.com/aqeLpX-20230417.png)
 
 ### [1Password](https://1password.com/zh-cn/) （付费）
 
@@ -102,6 +102,8 @@ layout: PostLayout
 
 快捷键启动程序，配合 Karabiner-Elments 使用，目的是避免快捷键重复的情况下能够快速开启/关闭某个应用，方便摸鱼 🌝。
 ![](https://static.junanch.com/cFbs8D-20230410.png)
+
+> Update：更换为 Raycast App Hotkey ![Raycast App HotKey](https://static.junanch.com/aqeLpX-20230417.png)
 
 ### [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
 
@@ -169,9 +171,9 @@ PDF 预览编辑、标注等，实践下来发现自己不太常用
 
 ### [~~Fig~~](https://fig.io/)
 
-> update: 弃用
-
 命令行提示
+
+> Update：弃用，更换为 fzf + fzf-tab ![](https://static.junanch.com/PDZ5OF-20230417.png)
 
 ### [Charles](https://www.charlesproxy.com/)
 
