@@ -69,26 +69,20 @@ layout: PostLayout
 
 全平台密码管理工具，体验很丝滑
 
-### [~~Bitwarden~~](https://bitwarden.com/)
-
-> 1Password 的备份方案
-
-密码管理软件，基础功能免费
+> 备用方案：[~~Bitwarden~~](https://bitwarden.com/)，基础功能免费，GitHub 开源
 
 ### [Bartendbar](https://www.macbartender.com/) （付费）
 
 菜单栏图标管理，一定程度上解决 “刘海屏” 隐藏图标的问题
 ![](https://www.macbartender.com/Bartender4/img/BartenderBar@2x.png)
 
-### [~~Hidden Bar~~](https://github.com/dwarvesf/hidden)
-
-> Bartendbar 的备份方案
-
-菜单栏图标管理，简单好用
+> 备用方案：[~~Hidden Bar~~](https://github.com/dwarvesf/hidden)
 
 ### [CleanShot X](https://cleanshot.com/) （付费）
 
 区域截图、滚动截图、GIF 录制、箭头文字标注，附送云空间
+
+> 备用方案：[Shottr](https://shottr.cc/)，基础功能免费
 
 ### [One Switch](https://fireball.studio/oneswitch/) （付费）
 
@@ -96,29 +90,32 @@ layout: PostLayout
 
 ### [PasteNow](https://pastenow.app/) （付费）
 
-历史剪切板工具，iOS & Mac 双平台数据同步
+历史剪切板工具，iOS/iPadOS/macOS 多平台数据同步
+
+![](https://static.junanch.com/hFStKG-20230417.png)
 
 ### [~~Manico~~](https://manico.im/) （付费）
 
 快捷键启动程序，配合 Karabiner-Elments 使用，目的是避免快捷键重复的情况下能够快速开启/关闭某个应用，方便摸鱼 🌝。
 ![](https://static.junanch.com/cFbs8D-20230410.png)
 
-> Update：更换为 Raycast App Hotkey ![Raycast App HotKey](https://static.junanch.com/aqeLpX-20230417.png)
+> Update：更换为 Raycast App Hotkey ![Raycast App HotKey](https://static.junanch.com/fC5Mhx-20230417.png)
 
 ### [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
 
 键位修改，灵活配置组合快捷键，这个是我目前使用的改建配置功能 & [配置地址](https://github.com/junanch/dotfiles/blob/main/mackup/.config/karabiner/karabiner.json)
 
 - SpaceFN: SpaceBar enables SpaceFN mode
+
 - SpaceFN: SpaceBar + b to SpaceBar (hold to repeat)
 - SpaceFN: SpaceBar + [h/j/k/l] to Left, Down, Up, Right
 - SpaceFN: SpaceBar + [1/2/3/4/5/6/7/8/9/=/-] to F[1~12]
-- SPaceFN: SpaceBar + [a/s/d/f/g/e/r/t/u/i/o/p/m] to [left_control + left_shift + left_option + left_command] + [a/s/d/f/g/e/r/t/u/i/o/p/m]
+- SPaceFN: SpaceBar + [a/s/d/f/g/e/r/t/y/u/i/o/p/m] to [left_control + left_shift + left_option + left_command] + [a/s/d/f/g/e/r/t/y/u/i/o/p/m]
 - right_command to [left_shift + left_option + left_command + left_control]
 - backquote to Esc, left_control + Esc to backquote, left_shift + Esc to ~
 - left_shift to left_control + SpaceBar (switch pervious input source)
 
-![Karabiner config](https://static.junanch.com/TvkqRD-20220728.png)
+![config](https://static.junanch.com/TvkqRD-20220728.png)
 
 > 单纯的空格键 + [a/s/d/f/g/e/r/t/u/i/o/p/m] 键位触发，首先会有个多键位冲突问题，其次空格键触发有两个触发点，分别是按下、抬起，我所希望的仅仅是按住空格键后 + 字母键才触发 Manico，如果抬起空格键 + 字母键也会触发的话，那就会和平时打字冲突，日常打字手速太快的话会有很高频率触发抬起空格键 + 字母键
 
@@ -131,6 +128,8 @@ layout: PostLayout
 在线视频下载，类似 YouTube、B 站、Twitter 等网站均可直接下载视频
 
 ### [Permute](https://software.charliemonroe.net/permute/) （付费）
+
+> 实践一段时间下来发现并不这么常用到
 
 允许你转换视频，音频和图像文件为不同的格式，增加音量，合并他们 (多个视频流合并成一个视频)，下载下来的视频可以转成 GIF
 
@@ -149,9 +148,9 @@ PDF 预览编辑、标注等，实践下来发现自己不太常用
 ### [Dato](https://sindresorhus.com/dato) （付费）
 
 时间、日历一起展示，UI 样式和原生一致，之前打折的时候购入
-![](https://sindresorhus.com/assets/dato/screenshot2.jpg)
+![](https://static.junanch.com/zdwT1J-20230418.png)
 
-### [iTerm](https://iterm2.com/) 终端
+### [iTerm](https://iterm2.com/)
 
 命令行输入的终端，可以使用 Minimal 这个选项可以把导航栏缩小
 ![](https://static.junanch.com/rMKJb1-20220726.png)
@@ -210,6 +209,58 @@ Git GUI 工具，看 Git 分支提交记录时更加直观、清晰
 Mac 搜狗输入法皮肤
 ![](https://camo.githubusercontent.com/f880a627272364c8fe5fc8ebdd2ccfc68a0591d15e8793c67186091dde6abda9/68747470733a2f2f63646e2e72656d697863646e2e636f6d2f696d6167652f67726170686974652d636f7665722e706e67)
 
+## Raycast 插件
+
+### [Visual Studio Code Recent Projects](https://www.raycast.com/thomas/visual-studio-code)
+
+打开最近使用的 VSCode 项目
+![](https://static.junanch.com/O5lEtz-20230228.gif)
+
+### [Antd open browser](https://www.raycast.com/crazyair/antd-open-browser)
+
+搜索 Ant Design 组件
+
+![](https://static.junanch.com/aI50pI-20230228.gif)
+
+### [Search npm Packages](https://www.raycast.com/mrmartineau/search-npm)
+
+搜索 npm 包
+
+![](https://static.junanch.com/1srwt4-20230228.gif)
+
+### [GitHub Repository Search](https://www.raycast.com/thomas/github-repository-search)
+
+搜索 GitHub 仓库
+
+![](https://files.raycast.com/c9z5sqt7xfissz6gd53tdg8eogk5)
+
+### [Color Pick](https://www.raycast.com/thomas/color-picker)
+
+快速选取颜色
+
+![](https://files.raycast.com/4aq4ee779q3vny4tl6nnnim26yie)
+
+### [Brew](https://www.raycast.com/nhojb/brew)
+
+Brew 的图形界面
+![](https://files.raycast.com/pp1sr128vs7ns5dsx8np0xn0z9h3)
+
+### [Google Workspace](https://www.raycast.com/raycast/google-workspace/commands)
+
+搜索你 Google 硬盘上面存储的文件
+![](https://files.raycast.com/bh3q7gliyy0hproj5ch6697srmx2)
+
+### [Port Manager](https://www.raycast.com/lucaschultz/port-manager)
+
+查询正在运行的端口
+![port manager](https://files.raycast.com/lmyiy7bppmeurq103mu3by7cykm4)
+
+### [IP Geolocation](https://www.raycast.com/koinzhang/ip-geolocation)
+
+查询电脑的 IP
+
+![](https://files.raycast.com/6nsoq6hkanpzccy21rn0fv6o4fpx)
+
 ## Git 配置
 
 ### [1Password for SSH & Git](https://developer.1password.com/docs/ssh/)
@@ -220,20 +271,27 @@ Mac 搜狗输入法皮肤
 
 ![](https://static.junanch.com/1edlV4-20220726.gif)
 ![](https://static.junanch.com/dDOrCf-20230417.png)
+![](https://static.junanch.com/7JxzqS-20230418.jpg)
 
 把对应的公钥下载到 `.ssh/config` 里面，然后修改 config 文件的 host，指向对应公钥就行了
 
 ```bash
-Host hub
+Host *
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+  ForwardAgent yes
+  UseKeychain yes
+  AddKeysToAgent yes
+
+Host GitHub
   HostName github.com
   User git
-  IdentityFile ~/.ssh/GitHub.pub
+  IdentityFile ~/.ssh/GitHubAuthKey.pub
   IdentitiesOnly yes
 
-Host lab
-  HostName gitlab.com
+Host Gitee
+  HostName gitee.com
   User git
-  IdentityFile ~/.ssh/GitLab.pub
+  IdentityFile ~/.ssh/GiteeAuthKey.pub
   IdentitiesOnly yes
 ```
 
@@ -243,9 +301,9 @@ Host lab
 
 git 配置好后就可以克隆项目了
 
-## 使用自己的 dotfiles
+## dotfiles
 
-我自己的 [dotfiles](https://github.com/junanch/dotfiles) 用途更多的是作为一个安装脚本，用于安装一些软件：
+使用自己的 [dotfiles](https://github.com/junanch/dotfiles)，用途更多的是作为一个安装脚本，用于安装一些软件：
 
 - iTerm2
 - oh-my-zsh
