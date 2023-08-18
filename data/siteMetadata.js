@@ -6,9 +6,9 @@ const siteMetadata = {
   theme: 'system', // system, dark or light
   siteUrl: 'https://junanch.com',
   siteRepo: 'https://github.com/junanch/junanch-blog',
-  siteLogo: '/static/images/logo.png',
+  siteLogo: '/icon-192.png',
   image: '/static/images/avatar.png',
-  socialBanner: '/static/images/social-banner.png',
+  socialBanner: '/social-banner.png',
   author: 'Junan',
   email: 'andyson1024@gmail.com',
   github: 'https://github.com/junanch',
