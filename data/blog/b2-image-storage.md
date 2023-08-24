@@ -12,9 +12,9 @@ layout: PostLayout
 
 之前使用阿里云主要是因为自己关注的博客中有相关的文章，所以就按流程实际动手了一下。
 
-- [国内自建图床指南](https://lutaonan.com/blog/aliyun-cdn-tutorial/)
+- [国内自建图床指南](https://lutaonan.com/blog/aliyun-cdn-tutorial/) - Randy
 
-- [个人博客自建图床](https://blog.sailfishc.com/posts/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%BB%BA%E5%9B%BE%E5%BA%8A/)
+- [个人博客自建图床](https://blog.sailfishc.com/posts/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%BB%BA%E5%9B%BE%E5%BA%8A/) - 橙子 🍊
 
 但是搞到一半发现如果需要国内加速、CDN 的话，不仅需要国内的域名，而且还需要备案 😂
 
